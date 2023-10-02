@@ -7,22 +7,33 @@
 
         }
 
-        //task 7.5.5
-        class Obj
+        //task 7.5.9
+        //
+    }
+
+    static class IntExtensions
+    {
+        public static int GetNegative(this int number)
         {
-            public string Name;
-            public string Description;
-
-            public static string Parent;
-            public static int DaysInWeek;
-            public static int MaxValue;
-
-            static Obj ()
+            if (number > 0)
             {
-                Parent = "System.Object";
-                DaysInWeek = 7;
-                MaxValue = 2000;
-            }        
+                return -number;
+            }
+            else
+            {
+                return number;
+            }
+        }
+        public static int GetPositive(this int number)
+        {
+            if (number < 0)
+            {
+                return -number;
+            }
+            else
+            {
+                return number;
+            }
         }
     }
 }
