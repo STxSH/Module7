@@ -7,27 +7,27 @@
 
         }
 
-        //task 7.2.12
+        //task 7.3.3
 
-        class Obj
+        abstract class ComputerPart
         {
-            public int Value;
-
-            public static Obj operator + (Obj a, Obj b)
-            {
-                return new Obj
-                {
-                    Value = a.Value + b.Value
-                };
-            }
-            public static Obj operator - (Obj a,  Obj b)
-            {
-                return new Obj
-                {
-                    Value = a.Value - b.Value
-                };
-            }
+            public abstract void Work();
         }
 
+        class Processor : ComputerPart
+        {
+            public override void Work() { }
+        }
+
+        class MotherBoard : ComputerPart
+        {
+            public override void Work() { }
+
+        }
+
+        class GraphicCard :ComputerPart
+        {
+            public override void Work() { }
+        }
     }
 }
