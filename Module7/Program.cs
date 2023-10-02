@@ -7,47 +7,27 @@
 
         }
 
-        //task 7.2.7
+        //task 7.2.12
 
-        class A
+        class Obj
         {
-            public virtual void Display()
+            public int Value;
+
+            public static Obj operator + (Obj a, Obj b)
             {
-                Console.WriteLine("A");
+                return new Obj
+                {
+                    Value = a.Value + b.Value
+                };
+            }
+            public static Obj operator - (Obj a,  Obj b)
+            {
+                return new Obj
+                {
+                    Value = a.Value - b.Value
+                };
             }
         }
-
-        class B : A
-        {
-            public new void Display()
-            {
-                Console.WriteLine("B");
-            }
-        }
-
-        class C : A
-        {
-            public override void Display()
-            {
-                Console.WriteLine("C");
-            }
-        }
-
-        class D : B
-        {
-            public new void Display()
-            {
-                Console.WriteLine("D");
-            }
-        }
-
-        class E : C
-        {
-            public new void Display() 
-            {
-                Console.WriteLine("E");
-            }
-        }       
 
     }
 }
