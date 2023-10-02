@@ -7,23 +7,22 @@
             
         }
         
-        //task 7.1.4
+        //task 7.1.5
 
-        class Employee
-        {
-            public string Name;
-            public int Age;
-            public int Salary;
-        }
+        class Food { }
 
-        class ProjectManager : Employee
-        {
-            public string projectName;
-        }
+        class Vegetable : Food { }
 
-        class Developer : Employee
-        {
-            public string programmingLanguage;
-        }
+        class Fruit : Food { }
+
+        class Apple : Fruit { }
+
+        class Banana : Fruit { }
+
+        class Pear : Fruit { }
+
+        class Potato : Vegetable { }
+
+        class Carrot : Vegetable { }
     }
 }
