@@ -7,13 +7,16 @@
 
         }
 
-        //task 7.5.2
+        //task 7.5.3
 
-        class Obj
+        class Helper
         {
-            public string Name;
-            public string Description;
-            public static int MaxValue = 2000;
+            public static void Swap (ref int i, ref int j)
+            {
+                int temp = i;
+                i = j;
+                j = temp;
+            }
         }
     }
 }
