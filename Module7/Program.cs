@@ -7,24 +7,47 @@
 
         }
 
-        //task 7.2.5
+        //task 7.2.7
 
-        class BaseClass
+        class A
         {
             public virtual void Display()
             {
-                Console.WriteLine("Метод класса BaseClass");
+                Console.WriteLine("A");
             }
         }
 
-        class DerivedClass : BaseClass
+        class B : A
+        {
+            public new void Display()
+            {
+                Console.WriteLine("B");
+            }
+        }
+
+        class C : A
         {
             public override void Display()
             {
-                base.Display();
-                Console.WriteLine("Метод класса DerivedClass");
+                Console.WriteLine("C");
             }
         }
+
+        class D : B
+        {
+            public new void Display()
+            {
+                Console.WriteLine("D");
+            }
+        }
+
+        class E : C
+        {
+            public new void Display() 
+            {
+                Console.WriteLine("E");
+            }
+        }       
 
     }
 }
