@@ -7,21 +7,33 @@
 
         }
 
-        //task 7.1.6
+        //task 7.1.10
 
-        class Obj
+        class BaseClass
         {
-            private string name;
-            private string owner;
-            private int length;
-            private int count;
+            protected string Name;
 
-            public Obj(string name, string ownerName, int objLength, int count)
+            public BaseClass(string name)
             {
-                this.name = name;
-                owner = ownerName;
-                length = objLength;
-                this.count = count;
+                Name = name;
+            }
+        }
+
+        class DerivedClass : BaseClass
+        {
+            public string Description;
+
+            public int Counter;
+
+            public DerivedClass (string name, string description) : base(name)
+            {
+                Description = description;
+            }
+
+            public DerivedClass (string name, string description, int counter) : base(name)
+            {
+                Description = description;
+                Counter = counter;
             }
         }
     }
