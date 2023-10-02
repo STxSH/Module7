@@ -7,37 +7,22 @@
 
         }
 
-        //task 7.2.4
+        //task 7.2.5
 
         class BaseClass
         {
-            public virtual int Counter
+            public virtual void Display()
             {
-                get;
-                set;
+                Console.WriteLine("Метод класса BaseClass");
             }
         }
 
         class DerivedClass : BaseClass
         {
-            private int counter;
-            public override int Counter
+            public override void Display()
             {
-                get
-                {
-                    return counter;
-                }
-                set
-                {
-                    if (value < 0)
-                    {
-                        Console.WriteLine("Число меньше 0");
-                    }
-                    else
-                    {
-                        counter = value;
-                    }
-                }
+                base.Display();
+                Console.WriteLine("Метод класса DerivedClass");
             }
         }
 
