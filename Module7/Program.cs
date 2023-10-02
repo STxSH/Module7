@@ -7,16 +7,22 @@
 
         }
 
-        //task 7.5.3
-
-        class Helper
+        //task 7.5.5
+        class Obj
         {
-            public static void Swap (ref int i, ref int j)
+            public string Name;
+            public string Description;
+
+            public static string Parent;
+            public static int DaysInWeek;
+            public static int MaxValue;
+
+            static Obj ()
             {
-                int temp = i;
-                i = j;
-                j = temp;
-            }
+                Parent = "System.Object";
+                DaysInWeek = 7;
+                MaxValue = 2000;
+            }        
         }
     }
 }
