@@ -7,14 +7,25 @@
 
         }
 
-        //task 7.6.6
-       
-        class Record<T1, T2>
+        //task 7.6.7
+
+        class Car<T>
         {
-            public T1 Id;
-            public T2 Value;
-            public DateTime Date;
+            public T Engine;
+            public virtual void ChangePart<T2> (T2 newPart)
+            {
+
+            }
         }
-    }
-    
+
+        class ElectricEngine { }
+
+        class GasEngine { }
+
+        class Battery { }
+
+        class Differencial { }
+
+        class Wheel { }
+    } 
 }
