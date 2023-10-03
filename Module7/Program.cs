@@ -7,17 +7,15 @@
 
         }
 
-        //task 7.6.10
+        //task 7.6.12
 
-        class Car<TEngine> where TEngine : Engine
+        abstract class Car<TEngine> where TEngine : Engine
         {
             public TEngine Engine;
-            public virtual void ChangePart<TPart> (TPart newPart) where TPart : CarPart
-            {
-
-            }
+            public abstract void ChangePart<TPart>(TPart newPart) where TPart : CarPart;            
         }
-        class Engine { }
+
+        abstract class Engine { }
 
         class CarPart { }
 
@@ -30,5 +28,17 @@
         class Differencial : CarPart { }
 
         class Wheel :CarPart { }
-    } 
+
+        class ElectricCar : Car<ElectricEngine>
+        {
+            public override void ChangePart<TPart>(TPart newPart)
+            {
+            }
+        }
+
+        class GasCar : Car<GasEngine> {
+            public override void ChangePart<TPart>(TPart newPart)
+            {
+            }
+        } 
 }
