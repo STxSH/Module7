@@ -7,33 +7,22 @@
 
         }
 
-        //task 7.5.9
-        //
-    }
+        //task 7.6.2
+       
+        class Car<T>
+        {
+            public T Engine;
+        }
 
-    static class IntExtensions
-    {
-        public static int GetNegative(this int number)
+        class ElectricEngine
         {
-            if (number > 0)
-            {
-                return -number;
-            }
-            else
-            {
-                return number;
-            }
+
         }
-        public static int GetPositive(this int number)
+
+        class GasEngine
         {
-            if (number < 0)
-            {
-                return -number;
-            }
-            else
-            {
-                return number;
-            }
+
         }
     }
+    
 }
