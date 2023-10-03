@@ -9,19 +9,11 @@
 
         //task 7.6.2
        
-        class Car<T>
+        class Record<T1, T2>
         {
-            public T Engine;
-        }
-
-        class ElectricEngine
-        {
-
-        }
-
-        class GasEngine
-        {
-
+            public T1 Id;
+            public T2 Value;
+            public DateTime Date;
         }
     }
     
