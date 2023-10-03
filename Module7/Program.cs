@@ -7,12 +7,12 @@
 
         }
 
-        //task 7.6.9
+        //task 7.6.10
 
-        class Car<T> where T : Engine
+        class Car<TEngine> where TEngine : Engine
         {
-            public T Engine;
-            public virtual void ChangePart<T2> (T2 newPart) where T2 : CarPart
+            public TEngine Engine;
+            public virtual void ChangePart<TPart> (TPart newPart) where TPart : CarPart
             {
 
             }
