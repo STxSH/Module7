@@ -7,7 +7,7 @@
 
         }
 
-        //task 7.6.2
+        //task 7.6.6
        
         class Record<T1, T2>
         {
