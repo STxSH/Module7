@@ -7,25 +7,28 @@
 
         }
 
-        //task 7.6.7
+        //task 7.6.9
 
-        class Car<T>
+        class Car<T> where T : Engine
         {
             public T Engine;
-            public virtual void ChangePart<T2> (T2 newPart)
+            public virtual void ChangePart<T2> (T2 newPart) where T2 : CarPart
             {
 
             }
         }
+        class Engine { }
 
-        class ElectricEngine { }
+        class CarPart { }
 
-        class GasEngine { }
+        class ElectricEngine : Engine { }
 
-        class Battery { }
+        class GasEngine : Engine { }
 
-        class Differencial { }
+        class Battery : CarPart { }
 
-        class Wheel { }
+        class Differencial : CarPart { }
+
+        class Wheel :CarPart { }
     } 
 }
